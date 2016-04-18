@@ -192,9 +192,10 @@ body {
 		.deviz {	
 			display: inline-block;
 		    font-size: 16px;
-		    font-family: "Raleway";
-		    color: rgb(34, 34, 34);
-		    line-height: 1.2;
+		    font-family: "OpenSans";
+			color: rgb(153, 153, 153);
+			font-style: italic;
+			line-height: 1.2;
 		    text-align: left;
 			margin-top: 32px;
 			
@@ -363,8 +364,7 @@ body {
 			}
 			
 			li {			
-				position: relative;
-				top: 3px;
+				position: relative;				
 				a {
 					text-transform: upperCase;
 					font-size: 16px;
@@ -480,6 +480,7 @@ body {
 		
 		.col-sm-6 {				
 			min-height: 40px;
+			padding: 0px;
 			
 			h3 {
 				text-align: left;
@@ -497,37 +498,35 @@ body {
 		}
 		
 		.col-sm-4 {
-			.btn {
+			a {
+				display: inline-block;
 				background-color: transparent;
 				border: 1px solid #fff;
 				margin: 0px;
-				width: 200px;
-				height: 40px;
-				
-				a {
-					text-decoration: none;
-					font-size: 12px;
-					font-family: "Raleway";
-					color: rgb(255, 255, 255);
-					font-weight: bold;
-					text-transform: uppercase;
-					line-height: 1.2;
-					text-align: center;
+				width: 200px;				
+				text-decoration: none;
+				font-size: 12px;
+				font-family: "Raleway";
+				color: rgb(255, 255, 255);
+				font-weight: bold;
+				text-transform: uppercase;
+				line-height: 1.2;
+				text-align: center;
+				padding: 12px 52px;
 					
-					&:hover,
-					&:active,
-					&:focus,
-					&:visited {
-						text-decoration: none;
-					}
+				&:hover,
+				&:active,
+				&:focus,
+				&:visited {
+					text-decoration: none;
 				}
-				
+					
 				@media (max-width: 792px) {
 					display: block;
 					margin-left: auto;
 					margin-right: auto;
-				}
-			}			
+				}					
+			}							
 		}
 	}
 }
@@ -632,6 +631,7 @@ footer {
 			text-align: left;
 			margin-top: 0px;
 			margin-bottom: 0px;
+			max-width: 220px;
 
 			@media (max-width: 792px) {
 				margin-left: auto;
@@ -673,7 +673,7 @@ footer {
 			
 			p {
 				display: inline-block;
-				float: right;
+				float: left;
 				color: rgb(153, 153, 153);
 				font-weight: bold;
 				font-family: "Raleway";
@@ -690,7 +690,8 @@ footer {
 		}
 		
 		.map {
-			p {				
+			p {	
+				margin-left: 20px;
 				font-size: 12px;			
 				line-height: 1.667;				
 			}
@@ -698,6 +699,7 @@ footer {
 		
 		.phone {
 			p {
+				margin-left: 44px;
 				font-size: 18px;
 				line-height: 1.111;
 			}
@@ -705,6 +707,7 @@ footer {
 		
 		.mail {
 			p {
+				margin-left: 44px;
 				font-size: 12px;
 				line-height: 1.667;
 				margin-top: 12px;

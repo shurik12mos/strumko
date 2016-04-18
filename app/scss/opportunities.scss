@@ -192,9 +192,10 @@ body {
 		.deviz {	
 			display: inline-block;
 		    font-size: 16px;
-		    font-family: "Raleway";
-		    color: rgb(34, 34, 34);
-		    line-height: 1.2;
+		    font-family: "OpenSans";
+			color: rgb(153, 153, 153);
+			font-style: italic;
+			line-height: 1.2;
 		    text-align: left;
 			margin-top: 32px;
 			
@@ -356,8 +357,7 @@ body {
 			}
 			
 			li {			
-				position: relative;
-				top: 3px;
+				position: relative;				
 				a {
 					text-transform: upperCase;
 					font-size: 16px;
@@ -388,14 +388,14 @@ body {
 
 //head 
 .head-service {
-	background-image: url(../images/electric635.jpg);
+	background-image: url(../images/opportunities.jpg);
 	background-position: center center;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
 
 .head {
-	min-height: 338px;
+	min-height: 335px;
 	position: relative;		
 	
 	.blackout {
@@ -445,7 +445,7 @@ body {
 		}	
 		
 		.underh {
-			font-size: 18px;
+			font-size: 22px;
 			font-family: "OpenSans";
 			color: rgb(238, 238, 238);
 			font-style: italic;
@@ -791,7 +791,7 @@ footer {
 		text-align: left;
 		margin-top: 70px;
 		margin-bottom: 0px;
-		
+				
 		@media (max-width: 792px) {
 			text-align: center;
 		}
@@ -821,6 +821,7 @@ footer {
 			text-align: left;
 			margin-top: 0px;
 			margin-bottom: 0px;
+			max-width: 220px;
 
 			@media (max-width: 792px) {
 				margin-left: auto;
@@ -862,7 +863,7 @@ footer {
 			
 			p {
 				display: inline-block;
-				float: right;
+				float: left;
 				color: rgb(153, 153, 153);
 				font-weight: bold;
 				font-family: "Raleway";
@@ -879,7 +880,8 @@ footer {
 		}
 		
 		.map {
-			p {				
+			p {	
+				margin-left: 20px;
 				font-size: 12px;			
 				line-height: 1.667;				
 			}
@@ -887,6 +889,7 @@ footer {
 		
 		.phone {
 			p {
+				margin-left: 44px;
 				font-size: 18px;
 				line-height: 1.111;
 			}
@@ -894,6 +897,7 @@ footer {
 		
 		.mail {
 			p {
+				margin-left: 44px;
 				font-size: 12px;
 				line-height: 1.667;
 				margin-top: 12px;

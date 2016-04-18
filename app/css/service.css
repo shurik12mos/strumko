@@ -20,6 +20,14 @@
   font-style: normal;
   font-weight: normal; }
 
+/* font-family: "RalewaySemiBoldItalic"; */
+@font-face {
+  font-family: "RalewaySemiBoldItalic";
+  src: url("../fonts/Raleway/Raleway-SemiBold-Italic.eot");
+  src: url("../fonts/Raleway/Raleway-SemiBold-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Raleway/Raleway-SemiBold-Italic.woff") format("woff"), url("../fonts/Raleway/Raleway-SemiBold-Italic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
+
 /* font-family: "RalewayBold"; */
 @font-face {
   font-family: "RalewayBold";
@@ -44,7 +52,9 @@
   color: #00a4e2;
   background-color: #fff;
   -webkit-transition: all 0.5s ease-out;
-  transition: all 0.5s ease-out; }
+  transition: all 0.5s ease-out;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; }
   .bordered-button:hover, .bordered-button:focus {
     text-decoration: none;
     border-color: #00a4e2; }
@@ -159,8 +169,9 @@ body {
     #header .container .deviz {
       display: inline-block;
       font-size: 16px;
-      font-family: "Raleway";
-      color: #222222;
+      font-family: "OpenSans";
+      color: #999999;
+      font-style: italic;
       line-height: 1.2;
       text-align: left;
       margin-top: 32px; }
@@ -294,8 +305,7 @@ body {
         color: #00a4e2;
         border-bottom: 3px solid #00a4e2; }
       #navbar .navbar .nav li {
-        position: relative;
-        top: 3px; }
+        position: relative; }
         #navbar .navbar .nav li a {
           text-transform: upperCase;
           font-size: 16px;
@@ -407,16 +417,17 @@ body {
         width: 100%;
         height: 44px;
         margin-bottom: 5px;
-        background-color: #00a4e2;
+        background-color: #fff;
+        color: #00a4e2;
         border-color: #00a4e2;
-        color: #fff;
+        font-weight: bold;
         text-transform: uppercase;
         font-size: 18px;
         font-family: "Raleway";
         line-height: 1.111; }
         .head .form form button:hover {
-          background-color: #fff;
-          color: #00a4e2; }
+          background-color: #00a4e2;
+          color: #fff; }
   .head .bordered-button {
     display: block;
     margin: 15px auto 15px auto;
@@ -624,7 +635,7 @@ body {
       vertical-align: middle;
       padding-left: 10px;
       font-size: 14px;
-      font-family: "Raleway";
+      font-family: "RalewaySemiBoldItalic";
       color: #555555;
       line-height: 1.2;
       text-align: left;
@@ -781,7 +792,8 @@ body {
     color: #00a4e2;
     background-color: #fff;
     -webkit-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out; }
+    transition: all 0.5s ease-out;
+    border-button: 6px; }
     #canDo .bordered-button:hover, #canDo .bordered-button:focus {
       text-decoration: none;
       border-color: #00a4e2; }
@@ -1319,7 +1331,9 @@ body {
         line-height: 1.429;
         text-align: center;
         border-color: #00a4e2;
-        border-width: 1px; }
+        border-width: 1px;
+        -webkit-border-radius: 6px;
+        border-radius: 6px; }
         #products #productBlock .product .productIn .button-consult .bordered-button:hover {
           background-color: #00a4e2;
           color: #fff; }
@@ -1466,7 +1480,9 @@ body {
       line-height: 1.429;
       text-align: center;
       border-color: #00a4e2;
-      border-width: 1px; }
+      border-width: 1px;
+      -webkit-border-radius: 6px;
+      border-radius: 6px; }
       #forWho .container .row .col-md-7 .button-consult .bordered-button:hover {
         background-color: #00a4e2;
         color: #fff; }
@@ -1510,7 +1526,8 @@ footer {
     line-height: 1.2;
     text-align: left;
     margin-top: 0px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    max-width: 220px; }
     @media (max-width: 792px) {
       footer .col-md-3:nth-child(1) .deviz {
         margin-left: auto;
@@ -1540,7 +1557,7 @@ footer {
           padding-right: 10px; } }
     footer .col-md-3:nth-child(2) .connectUs p {
       display: inline-block;
-      float: right;
+      float: left;
       color: #999999;
       font-weight: bold;
       font-family: "Raleway";
@@ -1553,12 +1570,15 @@ footer {
           padding-left: 10px;
           padding-right: 10px; } }
   footer .col-md-3:nth-child(2) .map p {
+    margin-left: 20px;
     font-size: 12px;
     line-height: 1.667; }
   footer .col-md-3:nth-child(2) .phone p {
+    margin-left: 44px;
     font-size: 18px;
     line-height: 1.111; }
   footer .col-md-3:nth-child(2) .mail p {
+    margin-left: 44px;
     font-size: 12px;
     line-height: 1.667;
     margin-top: 12px; }

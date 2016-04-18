@@ -31,6 +31,17 @@
     font-style: normal;
     font-weight: normal;
 }
+
+/* font-family: "RalewaySemiBoldItalic"; */
+@font-face {
+    font-family: "RalewaySemiBoldItalic";
+    src: url("../fonts/Raleway/Raleway-SemiBold-Italic.eot");
+    src: url("../fonts/Raleway/Raleway-SemiBold-Italic.eot?#iefix")format("embedded-opentype"),
+    url("../fonts/Raleway/Raleway-SemiBold-Italic.woff") format("woff"),
+    url("../fonts/Raleway/Raleway-SemiBold-Italic.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
 /* font-family: "RalewayBold"; */
 @font-face {
     font-family: "RalewayBold";
@@ -126,6 +137,7 @@ $textCol: rgb(34, 34, 34);
 		color: $blue;
 		background-color: #fff;
 		transition: all 0.5s ease-out;
+		border-radius: 6px;
 			
 		&:hover,
 		&:focus {
@@ -249,9 +261,10 @@ body {
 		.deviz {	
 			display: inline-block;
 		    font-size: 16px;
-		    font-family: "Raleway";
-		    color: rgb(34, 34, 34);
-		    line-height: 1.2;
+		    font-family: "OpenSans";
+			color: rgb(153, 153, 153);
+			font-style: italic;
+			line-height: 1.2;
 		    text-align: left;
 			margin-top: 32px;
 			
@@ -422,8 +435,7 @@ body {
 			}
 			
 			li {			
-				position: relative;
-				top: 3px;
+				position: relative;				
 				a {
 					text-transform: upperCase;
 					font-size: 16px;
@@ -570,17 +582,18 @@ body {
 				width: 100%;
 				height: 44px;
 				margin-bottom: 5px;
-				background-color: $blue;
+				background-color: #fff;
+				color: $blue;
 				border-color: $blue;
-				color: #fff;
+				font-weight: bold;
 				text-transform: uppercase;
 				font-size: 18px;
 				font-family: "Raleway";				
 				line-height: 1.111;
 				
 				&:hover {
-					background-color: #fff;
-					color: $blue;
+					background-color: $blue;					
+					color: #fff;
 				}				
 			}
 		}
@@ -741,7 +754,7 @@ body {
 			vertical-align: middle;
 			padding-left: 10px;
 			font-size: 14px;
-			font-family: "Raleway";
+			font-family: "RalewaySemiBoldItalic";			
 			color: rgb(85, 85, 85);
 			line-height: 1.2;
 			text-align: left;
@@ -889,6 +902,7 @@ body {
 		color: $blue;
 		background-color: #fff;
 		transition: all 0.5s ease-out;
+		border-button: 6px;
 			
 		&:hover,
 		&:focus {
@@ -1362,6 +1376,7 @@ body {
 						text-align: center;
 						border-color: $blue;
 						border-width: 1px;
+						border-radius: 6px;
 						
 						&:hover {
 							background-color: $blue;
@@ -1519,6 +1534,7 @@ body {
 						text-align: center;
 						border-color: $blue;
 						border-width: 1px;
+						border-radius: 6px;
 						
 						&:hover {
 							background-color: $blue;
@@ -1579,6 +1595,7 @@ footer {
 			text-align: left;
 			margin-top: 0px;
 			margin-bottom: 0px;
+			max-width: 220px;
 
 			@media (max-width: 792px) {
 				margin-left: auto;
@@ -1620,7 +1637,7 @@ footer {
 			
 			p {
 				display: inline-block;
-				float: right;
+				float: left;
 				color: rgb(153, 153, 153);
 				font-weight: bold;
 				font-family: "Raleway";
@@ -1637,7 +1654,8 @@ footer {
 		}
 		
 		.map {
-			p {				
+			p {	
+				margin-left: 20px;
 				font-size: 12px;			
 				line-height: 1.667;				
 			}
@@ -1645,6 +1663,7 @@ footer {
 		
 		.phone {
 			p {
+				margin-left: 44px;
 				font-size: 18px;
 				line-height: 1.111;
 			}
@@ -1652,6 +1671,7 @@ footer {
 		
 		.mail {
 			p {
+				margin-left: 44px;
 				font-size: 12px;
 				line-height: 1.667;
 				margin-top: 12px;

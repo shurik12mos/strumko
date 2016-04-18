@@ -111,8 +111,9 @@ body {
     #header .container .deviz {
       display: inline-block;
       font-size: 16px;
-      font-family: "Raleway";
-      color: #222222;
+      font-family: "OpenSans";
+      color: #999999;
+      font-style: italic;
       line-height: 1.2;
       text-align: left;
       margin-top: 32px; }
@@ -238,8 +239,7 @@ body {
         color: #00a4e2;
         border-bottom: 3px solid #00a4e2; }
       #navbar .navbar .nav li {
-        position: relative;
-        top: 3px; }
+        position: relative; }
         #navbar .navbar .nav li a {
           text-transform: upperCase;
           font-size: 16px;
@@ -260,13 +260,13 @@ body {
             background-color: transparent; }
 
 .head-service {
-  background-image: url(../images/electric635.jpg);
+  background-image: url(../images/opportunities.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover; }
 
 .head {
-  min-height: 338px;
+  min-height: 335px;
   position: relative; }
   .head .blackout {
     background-color: #3a4e56;
@@ -303,7 +303,7 @@ body {
       margin-left: auto;
       margin-right: auto; }
     .head .h1 .underh {
-      font-size: 18px;
+      font-size: 22px;
       font-family: "OpenSans";
       color: #eeeeee;
       font-style: italic;
@@ -670,7 +670,8 @@ footer {
     line-height: 1.2;
     text-align: left;
     margin-top: 0px;
-    margin-bottom: 0px; }
+    margin-bottom: 0px;
+    max-width: 220px; }
     @media (max-width: 792px) {
       footer .col-md-3:nth-child(1) .deviz {
         margin-left: auto;
@@ -700,7 +701,7 @@ footer {
           padding-right: 10px; } }
     footer .col-md-3:nth-child(2) .connectUs p {
       display: inline-block;
-      float: right;
+      float: left;
       color: #999999;
       font-weight: bold;
       font-family: "Raleway";
@@ -713,12 +714,15 @@ footer {
           padding-left: 10px;
           padding-right: 10px; } }
   footer .col-md-3:nth-child(2) .map p {
+    margin-left: 20px;
     font-size: 12px;
     line-height: 1.667; }
   footer .col-md-3:nth-child(2) .phone p {
+    margin-left: 44px;
     font-size: 18px;
     line-height: 1.111; }
   footer .col-md-3:nth-child(2) .mail p {
+    margin-left: 44px;
     font-size: 12px;
     line-height: 1.667;
     margin-top: 12px; }
