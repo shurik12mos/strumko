@@ -1,0 +1,27 @@
+{
+  "name": "strumko",
+  "description": "",
+  "version": "0.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap": "~3.3.5",
+    "html5-boilerplate": "~5.2.0",
+    "angular": "~1.4.0",
+    "angular-route": "~1.4.0"
+  },
+  "authors": [
+    "*Alex <*aa.yaroshenko@gmail.com*>"
+  ],
+  "main": "",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "app/bower_components",
+    "test",
+    "tests"
+  ]
+}

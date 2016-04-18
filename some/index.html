@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+
+<html lang="en" ng-app="myApp"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Strumko</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic&subset=cyrillic' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/main.css"> 
+</head>
+<body ng-controller="AppCtrl">
+
+  <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+  <section id="header">
+    <div class="container">
+		<div class="row">
+			<object class="logo" type="image/svg+xml" data="images/logo.svg"></object>
+			<span class="deviz">приведем в порядок Ваши электросети</span>
+			<span id="phone">(050) 011 71 31, (097) 78 98 378</span>
+		</div>		
+	</div>
+  </section>
+  <section id="navbar">
+	<div class="container">
+		<div class="row">
+			<nav class="navbar col-lg-offset-2" role="navigation">
+				<div class="container-fluid">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">						
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">							
+							<span class="sr-only">Toggle navigation</span>	
+							<i class="fa fa-bars"></i>
+						</button>							 
+					</div>
+
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav">
+							<li ng-class="{active: {{clas('main')}} }"><a href="#/main/" title="Главная" >Главная</a></li>
+							<li ng-class="{active: {{clas('service')}} }"><a href="#/service/" title="Обслуживание">Обслуживание</a></li>
+							<li><a href="#/opportunities/" title="Возможности">Возможности</a></li>
+							<li><a href="#/price/" title="Цены">Цены</a></li>
+							<li><a href="#/history/" title="Наша история">Наша история</a></li>			
+						</ul>									
+					</div><!-- /.navbar-collapse -->
+				</div><!-- /.container-fluid -->
+			</nav>
+		</div>		
+	</div>
+  </section>
+  
+  <div ng-view></div> 
+  
+    <footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<object class="logo" type="image/svg+xml" data="images/logo.svg"></object>
+					<span class="deviz">приведем в порядок Ваши электросети</span>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<h3>свяжитесь с нами</h3>
+					<div class="connectUs map">
+						<i class="fa fa-map-marker"></i>
+						<p>г. Запорожье<br/>ул. Независимой Украины 51</p>
+					</div>
+					<div class="connectUs phone">
+						<i class="fa fa-phone"></i>
+						<p>(096) 456-89-56<br/>(066) 258-56-12</p>
+					</div>
+					<div class="connectUs mail">
+						<i class="fa fa-envelope"></i>
+						<p>strumko@gmail.com </p>
+					</div>
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<h3>Наши работы</h3>
+					<div class="foophoto">
+						<img src="images/job1.jpg" alt=""/>
+					</div>
+					<div class="foophoto">
+						<img src="images/job2.jpg" alt=""/>
+					</div>
+					<div class="foophoto">
+						<img src="images/job3.jpg" alt=""/>
+					</div>
+					<div class="foophoto">
+						<img src="images/job4.jpg" alt=""/>
+					</div>
+					<div class="foophoto">
+						<img src="images/job5.jpg" alt=""/>
+					</div>
+					<div class="foophoto">
+						<img src="images/job6.jpg" alt=""/>	
+					</div>				
+				</div>
+				<div class="col-md-3 col-sm-3 col-xs-12">
+					<h3>еще разделы</h3>
+					<a ng-hide="{{main}}" href="#/main/" title="Главная">Главная</a>	
+					<a ng-hide="{{service}}" href="#/service/" title="Обслуживание">Обслуживание</a>
+					<a href="#/opportunities/" title="Возможности">Возможности</a>
+					<a href="#/price/" title="Цены">Цены</a>
+					<a href="#/history/" title="Наша история">Наша история</a>					
+				</div>
+			</div>
+			<div id="copyright">
+				<p>© 2015 Струмко. Все права защищены.</p>
+			</div>
+		</div>
+	</footer>	
+  
+  
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="app.js"></script>  
+  <script src="app/service/service.js"></script> 
+  <script src="app/main/main.js"></script> 
+ 
+</body>
+</html>
