@@ -79,6 +79,7 @@ body {
 #header {
   width: 100%;
   height: 80px;
+  overflow: hidden;
   background-color: #fff;
   -webkit-animation: showMenu 0.5s;
   animation: showMenu 0.5s; }
