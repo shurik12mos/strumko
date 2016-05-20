@@ -44,7 +44,7 @@ gulp.task('scss', function() {
 gulp.task('default', ['scss'/*, 'js', 'html'*/], function(){
 	gulp.watch('app/scss/*.scss', ['scss']);
 	/*gulp.watch('app/src/js/*.js',['js']);
-	gulp.watch('app/src/*.html', ['html']);	*/
+	gulp.watch('app/*.html', app/ua/*html, ['html']);	*/
 })
 
 // PRODUCTION	
@@ -54,8 +54,15 @@ gulp.task('useref', function () {
         .pipe(useref())
         .pipe(gulpif('*.js', uglify()))
         .pipe(gulpif('*.css', cleanCss({compatibility: 'ie8'})))
-        .pipe(gulp.dest('dist'));
-	
+        .pipe(gulp.dest('dist'));	
+});
+
+gulp.task('useref-ua', function () {	 
+    gulp.src('app/ua/*.html')
+        .pipe(useref())
+        .pipe(gulpif('*.js', uglify()))
+        .pipe(gulpif('*.css', cleanCss({compatibility: 'ie8'})))
+        .pipe(gulp.dest('dist/ua/'));	
 });
 
 gulp.task('image', function(){
@@ -83,6 +90,6 @@ gulp.task('other', function(){
 });
 
 
-gulp.task('production', ['useref', 'image', 'fonts', 'api', 'other'], function(){
+gulp.task('production', ['useref', 'useref-ua', 'image', 'fonts', 'api', 'other'], function(){
 	
 });

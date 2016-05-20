@@ -625,6 +625,7 @@ body {
 //Opportunities
 #posibilities {	
 	background-color: rgb(247, 247, 247);
+	overflow: hidden;
 	
 	@include sectionHeader($textCol, 45);
 	
@@ -643,6 +644,10 @@ body {
 			color: $silver;
 			float: left;
 			margin-left: 60px;
+			
+			@media (max-width: 792px) {
+				margin-left: 15px;
+			}
 			
 			
 			i{
@@ -801,11 +806,12 @@ body {
 	#listCanDo {
 		overflow: hidden;
 		width: 100%;
-		height: 330px;
+		height: 333px;
 		
 		.itemCanDo {
 			width: 24%;
 			display: inline-block;
+			vertical-align: top;
 			
 			@media (max-width: 792px) {
 				width: 48%;
@@ -869,7 +875,8 @@ body {
 				line-height: 1.538;
 				text-align: center;
 				margin-top: 0px;
-				margin-bottom: 110px;
+				margin-bottom: 0px;				
+				min-height: 118px;				
 			}
 		}
 	}
@@ -955,7 +962,10 @@ body {
 #works{
 	@include sectionHeader(#fff, 80);	
 	background-color: #3d3d40;
-	overflow: hidden;
+	
+	.row {
+		overflow: hidden;
+	}
 	
 	.h1 {
 		.underh {
@@ -1001,7 +1011,7 @@ body {
 		@media (max-width: 1200px) {
 			.workPhoto {
 				padding: 5px;				
-				height: auto;
+				height: auto;				
 				display: block;
 				margin-left: auto;
 				margin-right: auto;				
@@ -1010,38 +1020,17 @@ body {
 	}
 	
 	#comments {
-		.slideNav {
-			margin-bottom: 95px;
-			width: 40px;
-			font-size: 0px;
-			margin-left: auto;
-			margin-right: auto;
-			
-			.nav {
-				display: inline-block;
-				border-style: solid;
-				border-width: 2px;
-				border-color: rgb(204, 204, 204);
-				border-radius: 50%;
-				background-color: rgba(255, 255, 255, 0);
-				opacity: 0.6;
-				width: 10px;
-				height: 10px;
-				margin-left: 5px;
-				
-				&:first-child {
-					margin-left: 0px;
-				}				
-			}
-			
-			.active {
-				border-color: #fff;				
-				background-color: #fff;
-				opacity: 1;
-			}
-		}
+		width: 300%;		
+		position: relative;
+		left: 0;
+		user-select: none;
+		cursor: grab;			
 		
 		.comment {
+			display: inline-block;			
+			width: 33%;
+			vertical-align: top;		
+			
 			.fa {
 				display: block;
 				font-size: 30px;				
@@ -1099,6 +1088,39 @@ body {
 					margin-top: 0px;					
 				}
 			}
+		}
+		
+	}
+	.slideNav {
+		margin-bottom: 95px;
+		width: 40px;
+		font-size: 0px;
+		margin-left: auto;
+		margin-right: auto;
+			
+		.nav {
+			display: inline-block;
+			cursor: pointer;
+			border-style: solid;
+			border-width: 2px;
+			border-color: rgb(204, 204, 204);
+			border-radius: 50%;
+			background-color: rgba(255, 255, 255, 0);
+			opacity: 0.6;
+			width: 10px;
+			height: 10px;
+			margin-left: 5px;
+			transition: all 0.5s;
+				
+			&:first-child {
+				margin-left: 0px;
+			}				
+		}
+			
+		.nav.active {
+			border-color: #fff;				
+			background-color: #fff;
+			opacity: 1;
 		}
 	}
 }
@@ -1510,6 +1532,68 @@ body {
 					&:nth-child(2) {
 						margin-top: 55px;	
 						margin-bottom: 20px;						
+					}
+				}
+				
+				.clock {
+					display: block;
+					text-align: center;
+					width: 283px;					
+					margin-left: auto;
+					margin-right: auto;
+					
+					@media (max-width: 792px) {
+						width: 100%;
+						position: relative;
+						height: 93px;
+						
+						&>div {
+							position: absolute;
+							margin: auto;
+							top: 0; right: 0; bottom: 0; left: 0;
+						}
+						
+					}
+					
+					.clockBlock {
+						display: inline-block;
+						border-radius: 10px;
+						background-color: rgb(255, 255, 255);
+						opacity: 0.678;	
+						max-width: 20%;		
+						width: 62px;
+						height: 93px;
+						z-index: 46;
+						margin-right: 8px;		
+						
+						&:nth-child(4) {
+							margin-right: 0px;
+						}
+						
+						@media (max-width: 640px) {
+							max-width: 20%;
+						}
+						
+						.time {			
+							font-size: 40px;
+							font-family: "Raleway";
+							color: rgb(34, 34, 34);
+							text-transform: uppercase;			
+							text-align: center;
+							line-height: 1;
+							padding: 15px 0 10px 0;
+							margin: 0px;
+							
+						}
+						
+						.timeDown {			
+							font-size: 12px;
+							font-family: "Raleway";
+							color: rgb(34, 34, 34);
+							text-transform: uppercase;			
+							text-align: center;
+							margin: 0px;
+						}
 					}
 				}
 				.button-consult {
