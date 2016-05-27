@@ -93,6 +93,10 @@
   <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+  <div class="langFixed">
+	<p>Змінити мову:</p>
+	<a href="../index.html" title="Русский">Русский</a>		
+  </div>
   <section id="header">
     <div class="container">
 		<div class="row">
@@ -126,6 +130,10 @@
 							<li><a href="price.html" title="Ціни">Ціни</a></li>
 							<!--<li><a href="history.html" title="Наша історія">Наша історія</a></li>	-->		
 						</ul>	
+						<div class="lang">
+							<p>Змінити мову:</p>
+							<a href="../index.html" title="Русский">Русский</a>		
+						</div>
 						<span id="phone2">(099) 049 39 11, (067) 708 15 36</span>
 					</div><!-- /.navbar-collapse -->
 				</div><!-- /.container-fluid -->
@@ -372,12 +380,24 @@
 					</p>				
 				</div><!-- div h1-->
 				<div id="workPhotos">
-					<img class="workPhoto" src="../images/job1big.jpg" alt=""/>
-					<img class="workPhoto" src="../images/job2big.jpg" alt=""/>
-					<img class="workPhoto" src="../images/job3big.jpg" alt=""/>
-					<img class="workPhoto" src="../images/job4big.jpg" alt=""/>
-					<img class="workPhoto" src="../images/job5big.jpg" alt=""/>
-					<img class="workPhoto" src="../images/job6big.jpg" alt=""/>				
+					<div  class="workPhoto">
+						<img src="../images/job1big.jpg" alt=""/>
+					</div>
+					<div  class="workPhoto">
+						<img src="../images/job2big.jpg" alt=""/>
+					</div>
+					<div  class="workPhoto">
+						<img src="../images/job3big.jpg" alt=""/>
+					</div>
+					<div  class="workPhoto">
+						<img src="../images/job4big.jpg" alt=""/>
+					</div>
+					<div  class="workPhoto">
+						<img src="../images/job5big.jpg" alt=""/>
+					</div>
+					<div  class="workPhoto">
+						<img src="../images/job6big.jpg" alt=""/>		
+					</div>						
 				</div>
 			</div>
 		</div>
@@ -520,7 +540,7 @@
 		<div class="container">
 			<div class="row">				
 				<div class="col-sm-6 col-xs-12 col-sm-offset-2">
-					<h3>Хочете ознайомитися із повним прайсом електромонтажних послуг?</h3>
+					<h3>Хочете ознайомитися із повним прайсом послуг?</h3>
 				</div>
 				<div class="col-sm-4 col-xs-12">
 					<a class="btn" href="price.html#priceList" title="Прайс-лист">ОЗНАЙОМИТИСЬ</a>
@@ -627,22 +647,7 @@
 				<div class="col-md-3 col-sm-3 col-xs-12">
 					<h3>НашІ рОботИ</h3>
 					<div class="foophoto">
-						<img src="../images/job1big.jpg" alt=""/>
-					</div>
-					<div class="foophoto">
-						<img src="../images/job2big.jpg" alt=""/>
-					</div>
-					<div class="foophoto">
-						<img src="../images/job3big.jpg" alt=""/>
-					</div>
-					<div class="foophoto">
-						<img src="../images/job4big.jpg" alt=""/>
-					</div>
-					<div class="foophoto">
-						<img src="../images/job5big.jpg" alt=""/>
-					</div>
-					<div class="foophoto">
-						<img src="../images/job6big.jpg" alt=""/>	
+						<img src="../images/small_jobs.png" alt=""/>
 					</div>				
 				</div>
 				<div class="col-md-3 col-sm-3 col-xs-12">
@@ -688,119 +693,9 @@
   
  <script src="../js/overall.js"></script>
   
-  <script src="../js/main.js"></script>
+  <script src="../js/mainUkr.js"></script>
  
  
- <!-- <script type="text/javascript">
- var sliderX = document.getElementById('comments');
-	var slider = $('#comments');
-	var x=0;
-	var container = $('.container').width();
-	var nav = $('.slideNav>.nav');	
-	var slideTo, currentPos;
-	var click = false;	
-	
-	function slideX(event){
-
-		if (event) {
-			
-			if ('changedTouches' in event) {
-				x = event.changedTouches[0].clientX || event.changedTouches[0].pageX
-			} else {
-				x = event.clientX || event.pageX;			
-			}
-						currentPos = slider.css('left').replace('px', '')*300/slider.width();		
-			sliderX.addEventListener('touchmove',move, false);	
-			click = true;	
-		}		
-	}
-	
-	function move(event){
-		if (event) {
-			var curPos;
-			if ('changedTouches' in event) {
-				curPos = event.changedTouches[0].clientX || event.changedTouches[0].pageX
-			} else {
-				curPos = event.clientX || event.pageX;			
-			}
-			
-			slideTo = (curPos-x)*100*1.5/container;		
-			slider.css({left: (currentPos+slideTo)+"%"});	
-		}		
-	}
-	
-	function activeNav (pos) {		
-					
-		switch(pos){
-			case 0: 
-				nav.removeClass('active');
-				nav.eq(0).addClass('active');
-				break;
-			case -100:
-				nav.removeClass('active');
-				nav.eq(1).addClass('active');
-				break;
-			case -200:
-				nav.removeClass('active');
-				nav.eq(2).addClass('active');
-				break;
-			default:
-				nav.removeClass('active');
-				nav.eq(0).addClass('active');
-				break;
-		}			
-	};
-	
-	function toSlide(pos) {		
-		var toSlide;
-		if (pos<=0) {
-			toSlide = pos;
-		} else {
-			toSlide = currentPos+slideTo;
-		}		
-		if (toSlide>0) {			
-			toSlide = 0;
-		} else if (toSlide<-200) {			
-			toSlide = -200;
-		} else {			
-			toSlide = Math.round((toSlide)/100)*100; 
-		}
-			
-		activeNav(toSlide);
-		slider.animate({left: toSlide+"%"}, 500);		
-	};
-	
-	nav.click(function(){
-		var slide = $(this).attr('data-slide');			
-		var pos;
-		switch(slide) {
-			case "0":
-				pos = 0;
-				break;
-			case "1":
-				pos = -100;
-				break;
-			case "2": 
-				pos = -200;
-				break;
-			default:				
-				pos = 0;
-		}		
-		toSlide(pos);
-	});
-	
-	
-	sliderX.addEventListener('touchstart', function(event){			
-		slide(event);	
-	}, false);
-	document.addEventListener('touchend', function(event){		
-		sliderX.removeEventListener('touchmove', move, false);
-		if (click) {
-			toSlide();			
-		}
-		click = false;
-	},false);
-  
- </script>-->
+ 
 </body>
 </html>

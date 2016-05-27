@@ -1,0 +1,76 @@
+.lang {
+	height: 68px;
+	//margin-right: 70px;
+	display: inline-block;
+	position: absolute;
+	right: 70px;
+	
+	@media (max-width: 792px) {
+		height: auto;
+		min-height: 68px;
+		right: 15px;
+	}
+	
+	p {
+		margin-bottom: 5px;
+		margin-top: 10px;
+		font-weight: bold;
+	}
+
+	a {
+		font-size: 16px;
+		color: $blue;
+		text-decoration: none;
+		
+		&:hover {
+			color: $blue/2;
+		}
+		
+		&:hover,
+		&:focus,
+		&:visited {
+			text-decoration: none;			
+		}
+	}
+}
+
+.langFixed {
+	@media (min-width: 792px) {
+		display: none !important;
+	}
+	z-index: 3001;
+	height: 68px;
+	width: 120px;
+	padding: 0px 10px;
+	background-color: #222;	
+	display: none;
+	position: fixed;
+	right: 0px;
+	bottom: 0px;
+	text-align: center;	
+	border-radius: 10px;
+	opacity: 0.9;
+	
+	p {
+		margin-bottom: 5px;
+		margin-top: 10px;
+		font-weight: bold;
+		color: #fff;
+	}
+
+	a {
+		font-size: 16px;
+		color: $blue;
+		text-decoration: none;
+		
+		&:hover {
+			color: $blue/2;
+		}
+		
+		&:hover,
+		&:focus,
+		&:visited {
+			text-decoration: none;			
+		}
+	}
+}

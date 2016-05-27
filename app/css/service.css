@@ -36,6 +36,57 @@
   font-style: normal;
   font-weight: normal; }
 
+.lang {
+  height: 68px;
+  display: inline-block;
+  position: absolute;
+  right: 70px; }
+  @media (max-width: 792px) {
+    .lang {
+      height: auto;
+      min-height: 68px;
+      right: 15px; } }
+  .lang p {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold; }
+  .lang a {
+    font-size: 16px;
+    color: #00a4e2;
+    text-decoration: none; }
+    .lang a:hover {
+      color: #005271; }
+    .lang a:hover, .lang a:focus, .lang a:visited {
+      text-decoration: none; }
+
+.langFixed {
+  z-index: 3001;
+  height: 68px;
+  width: 120px;
+  padding: 0px 10px;
+  background-color: #222;
+  display: none;
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  opacity: 0.9; }
+  .langFixed p {
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #fff; }
+  .langFixed a {
+    font-size: 16px;
+    color: #00a4e2;
+    text-decoration: none; }
+    .langFixed a:hover {
+      color: #005271; }
+    .langFixed a:hover, .langFixed a:focus, .langFixed a:visited {
+      text-decoration: none; }
+
 .bordered-button {
   display: block;
   margin: 15px auto 15px auto;
@@ -106,6 +157,9 @@
       text-transform: uppercase;
       text-align: center;
       margin: 0px; }
+
+.svg {
+  display: none; }
 
 body {
   font-family: "Raleway"; }
@@ -220,7 +274,7 @@ body {
   -webkit-animation: showMenu 0.5s;
   animation: showMenu 0.5s; }
   #navbar .navbar {
-    height: 68px;
+    height: 72px;
     margin-bottom: 0px; }
     @media (max-width: 792px) {
       #navbar .navbar {
@@ -711,17 +765,51 @@ body {
   #canDo #listCanDo {
     overflow: hidden;
     width: 100%;
-    height: 333px; }
+    height: 333px;
+    position: relative; }
+    #canDo #listCanDo .itemBlock {
+      width: auto;
+      position: relative;
+      font-size: 0px; }
+    #canDo #listCanDo .arrow {
+      position: absolute;
+      top: 25px;
+      cursor: pointer;
+      z-index: 30;
+      fill: #ccc;
+      -webkit-transition: all 0.5s;
+      transition: all 0.5s; }
+      #canDo #listCanDo .arrow:hover {
+        fill: #00a4e2; }
+    #canDo #listCanDo .left {
+      left: 10px; }
+    #canDo #listCanDo .right {
+      right: 10px; }
+    #canDo #listCanDo #arrowRight {
+      fill: blue; }
+    #canDo #listCanDo .horLine {
+      display: block;
+      width: 93%;
+      border-bottom: 1px solid #eeeeee;
+      position: absolute;
+      top: 35px;
+      left: 3.5%;
+      z-index: -1; }
+      @media (max-width: 792px) {
+        #canDo #listCanDo .horLine {
+          width: 80%;
+          left: 10%; } }
     #canDo #listCanDo .itemCanDo {
-      width: 24%;
+      width: 25%;
       display: inline-block;
-      vertical-align: top; }
+      vertical-align: top;
+      z-index: 2; }
       @media (max-width: 792px) {
         #canDo #listCanDo .itemCanDo {
-          width: 48%; } }
+          width: 50%; } }
       @media (max-width: 480px) {
         #canDo #listCanDo .itemCanDo {
-          width: 98%; } }
+          width: 100%; } }
       #canDo #listCanDo .itemCanDo div {
         position: relative;
         width: 70px;
@@ -732,7 +820,8 @@ body {
         border: 1px solid #eeeeee;
         -webkit-border-radius: 50%;
         border-radius: 50%;
-        text-align: center; }
+        text-align: center;
+        background-color: #fff; }
         #canDo #listCanDo .itemCanDo div .fa {
           width: 24px;
           height: 24px;
@@ -863,7 +952,8 @@ body {
       margin-left: auto;
       margin-right: auto;
       -webkit-border-radius: 0px;
-      border-radius: 0px; }
+      border-radius: 0px;
+      min-height: 32px; }
     #chooseUs .rasnye-kompanii p {
       font-size: 14px;
       font-family: "RalewaySemiBold";
@@ -921,6 +1011,12 @@ body {
   #works #workPhotos {
     font-size: 0px;
     margin-bottom: 100px; }
+    #works #workPhotos .workPhoto {
+      display: inline-block;
+      overflow: hidden;
+      text-align: center; }
+      #works #workPhotos .workPhoto img {
+        min-width: 100%; }
     #works #workPhotos .workPhoto:nth-child(1) {
       padding-right: 2.5px;
       padding-bottom: 2.5px; }
@@ -943,11 +1039,19 @@ body {
       padding-left: 2.5px; }
     @media (max-width: 1200px) {
       #works #workPhotos .workPhoto {
-        padding: 5px;
-        height: auto;
-        display: block;
+        width: 33%;
+        height: 300px;
+        overflow: hidden;
         margin-left: auto;
-        margin-right: auto; } }
+        margin-right: auto;
+        padding: 15px 7.5px; } }
+    @media (max-width: 480px) {
+      #works #workPhotos .workPhoto {
+        height: auto;
+        width: 96%;
+        overflow: hidden;
+        padding: 0px;
+        margin: 7.5px 2%; } }
   #works #comments {
     width: 300%;
     position: relative;
@@ -1166,6 +1270,9 @@ body {
       margin-top: 100px; }
       #whyWe .container .row #whyWeList .marginMin {
         margin-left: -30px; }
+        @media (max-width: 792px) {
+          #whyWe .container .row #whyWeList .marginMin {
+            margin-left: auto; } }
         #whyWe .container .row #whyWeList .marginMin .benefit {
           margin-bottom: 30px;
           max-height: 80px;
@@ -1176,9 +1283,15 @@ body {
             #whyWe .container .row #whyWeList .marginMin .benefit {
               padding-right: 0px;
               text-align: center;
-              display: block;
+              display: table;
+              width: auto;
+              min-width: 80%;
               margin-left: auto;
               margin-right: auto; } }
+          @media (max-width: 480px) {
+            #whyWe .container .row #whyWeList .marginMin .benefit {
+              width: 100%;
+              text-align: left; } }
           #whyWe .container .row #whyWeList .marginMin .benefit .icon {
             position: relative;
             width: 74px;
@@ -1188,7 +1301,8 @@ body {
             border-radius: 5px;
             background-color: #fff;
             color: #999999;
-            float: left; }
+            float: left;
+            text-align: left; }
             #whyWe .container .row #whyWeList .marginMin .benefit .icon i {
               vertical-align: middle;
               text-align: center;
@@ -1663,44 +1777,14 @@ footer {
     footer .col-md-3:nth-child(3) h3 {
       margin-bottom: 30px; }
     footer .col-md-3:nth-child(3) .foophoto {
-      display: inline-block;
-      width: 33.3%;
-      height: 70px;
+      display: block;
       overflow: hidden;
       position: relative; }
-      @media (max-width: 792px) {
-        footer .col-md-3:nth-child(3) .foophoto {
-          max-width: 70px;
-          padding: 5px !important; } }
       footer .col-md-3:nth-child(3) .foophoto img {
-        position: absolute;
-        top: center;
-        left: center;
-        width: 100%;
-        height: 70px; }
-        @media (max-width: 792px) {
-          footer .col-md-3:nth-child(3) .foophoto img {
-            padding: 5px !important; } }
-      footer .col-md-3:nth-child(3) .foophoto:nth-child(2) {
-        padding-right: 2.5px;
-        padding-bottom: 2.5px; }
-      footer .col-md-3:nth-child(3) .foophoto:nth-child(3) {
-        padding-right: 2.5px;
-        padding-bottom: 2.5px;
-        padding-left: 2.5px; }
-      footer .col-md-3:nth-child(3) .foophoto:nth-child(4) {
-        padding-bottom: 2.5px;
-        padding-left: 2.5px; }
-      footer .col-md-3:nth-child(3) .foophoto:nth-child(5) {
-        padding-right: 2.5px;
-        padding-top: 2.5px; }
-      footer .col-md-3:nth-child(3) .foophoto:nth-child(6) {
-        padding-right: 2.5px;
-        padding-top: 2.5px;
-        padding-left: 2.5px; }
-      footer .col-md-3:nth-child(3) .foophoto:nth-child(7) {
-        padding-top: 2.5px;
-        padding-left: 2.5px; }
+        display: block;
+        max-width: 265 px;
+        margin-left: auto;
+        margin-right: auto; }
   footer .col-md-3:nth-child(4) h3 {
     margin-bottom: 20px; }
   footer .col-md-3:nth-child(4) a {
