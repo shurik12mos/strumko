@@ -1,0 +1,44 @@
+[
+	{
+		"name": "Замена этажного щитка",
+		"image": "floor_shield.jpg",
+		"description": "Пятиэтажный жилой дом",
+		"spreadSheet": "https://docs.google.com/spreadsheets/d/11qp-AcqYcpFM260LWrpBj6HTSCPWIThzc3xR6b1r8-4/pubhtml?gid=2096380610&single=true"	
+	},
+	{
+		"name": "Замена двух пробок",
+		"image": "electric_fuse.jpg",
+		"description": "Панель учета электроэнергии",
+		"spreadSheet": "https://docs.google.com/spreadsheets/d/1CgfsA2MQ9EglITNPBJPnV8K11Ht-NVGDFxpJQkczTrI/pubhtml?gid=2096380610&single=true"		
+	},
+	{
+		"name": "Замена магистральных проводов",
+		"image": "main_wires.jpg",
+		"description": "9 этажей, 2 стояка на одном этаже",
+		"spreadSheet": ""	
+	},
+	{
+		"name": "Монтаж учета электроэнергии ",
+		"image": "account.jpg",
+		"description": "Трехфазное трансформаторное включение",
+		"spreadSheet": "https://docs.google.com/spreadsheets/d/195I23YhlYtDsXLo4nOP89hYQeqfw9qiyD0SKujNomUg/pubhtml?gid=2096380610&single=true"	
+	},
+	{
+		"name": "Монтаж стабилизаторов напряжения",
+		"image": "stabilizer.jpg",
+		"description": "Частный жилой дом",
+		"spreadSheet": "https://docs.google.com/spreadsheets/d/1lwDWi_D9qAHc1QcOYqFEd5mQrlsfv62eykMkfapyeoA/pubhtml?gid=2096380610&single=true"		
+	},
+	{
+		"name": "Ремонт электрощитовой",
+		"image": "main_shield_5.jpg",
+		"description": "Пятиэтажный жилой дом",
+		"spreadSheet": "https://docs.google.com/spreadsheets/d/1tzCpidqFVXYGWhYYGBRY_e_8bDf_TMPCLnNewzji3K0/pubhtml?gid=2096380610&single=true"	
+	},
+	{
+		"name": "Подключение электродвигателя",
+		"image": "electric_motor.jpg",
+		"description": "С кнопочным постом пуск/стоп",
+		"spreadSheet": "https://docs.google.com/spreadsheets/d/1kzS2gFWeMFjAZh4M42zx6qFzIYXLjL6QiP2c84JgQ5o/pubhtml?gid=2096380610&single=true"	
+	}	
+]

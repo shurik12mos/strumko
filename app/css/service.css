@@ -73,6 +73,9 @@
   -webkit-border-radius: 10px;
   border-radius: 10px;
   opacity: 0.9; }
+  @media (min-width: 792px) {
+    .langFixed {
+      display: none !important; } }
   .langFixed p {
     margin-bottom: 5px;
     margin-top: 10px;
